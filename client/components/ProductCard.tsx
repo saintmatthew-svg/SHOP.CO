@@ -31,7 +31,7 @@ export default function ProductCard({
   const displayPrice = discount ? discountedPrice : price;
 
   const handleAddToCart = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent Link navigation
+    e.preventDefault();
     e.stopPropagation();
 
     const cartItem = {
@@ -79,7 +79,6 @@ export default function ProductCard({
 
   return (
     <div className="group">
-      {/* Product Image - Clickable Link */}
       <Link to={`/product/${id}?source=${source}`}>
         <div className="bg-gray-100 rounded-2xl p-4 mb-4 aspect-square">
           <img
@@ -90,7 +89,6 @@ export default function ProductCard({
         </div>
       </Link>
 
-      {/* Product Info */}
       <div className="space-y-3">
         <Link to={`/product/${id}?source=${source}`}>
           <h3 className="font-semibold text-gray-900 truncate hover:text-gray-700">{title}</h3>
@@ -119,7 +117,6 @@ export default function ProductCard({
           )}
         </div>
 
-        {/* Add to Cart Button */}
         <button
           onClick={handleAddToCart}
           className="w-full bg-black text-white py-2 px-4 rounded-full font-medium hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2"
