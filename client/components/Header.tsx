@@ -51,9 +51,6 @@ export default function Header() {
         >
           Sign Up Now
         </button>
-        <button className="absolute right-4 top-2 text-white hover:text-gray-300">
-          <X size={16} />
-        </button>
       </div>
 
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
